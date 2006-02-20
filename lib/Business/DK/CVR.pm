@@ -1,6 +1,6 @@
 package Business::DK::CVR;
 
-# $Id: CVR.pm,v 1.1 2006-02-20 21:37:04 jonasbn Exp $
+# $Id: CVR.pm,v 1.2 2006-02-20 22:28:43 jonasbn Exp $
 
 use strict;
 use vars qw($VERSION @ISA @EXPORT_OK);
@@ -66,6 +66,10 @@ __END__
 
 Business::DK::CVR - a danish CVR (VAT Registration) code generator/validator
 
+=head1 VERSION
+
+This documentation describes version 0.01
+
 =head1 SYNOPSIS
 
 	use Business::DK::CVR qw(validate);
@@ -89,6 +93,12 @@ Business::DK::CVR - a danish CVR (VAT Registration) code generator/validator
 =head1 DESCRIPTION
 
 =head2 validate
+
+=head1 PRIVATE FUNCTIONS
+
+=head2 _length
+
+=head2 _calculate_sum
 
 =head1 EXPORTS
 
