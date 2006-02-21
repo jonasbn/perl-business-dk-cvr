@@ -1,0 +1,11 @@
+Build.PL
+Changes
+INSTALL
+lib/Business/DK/CVR.pm
+MANIFEST			This list of files
+META.yml
+README
+t/00.load.t
+t/validate.t
+TODO
+Makefile.PL
