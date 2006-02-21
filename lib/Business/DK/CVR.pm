@@ -1,6 +1,6 @@
 package Business::DK::CVR;
 
-# $Id: CVR.pm,v 1.2 2006-02-20 22:28:43 jonasbn Exp $
+# $Id: CVR.pm,v 1.3 2006-02-21 19:53:55 jonasbn Exp $
 
 use strict;
 use vars qw($VERSION @ISA @EXPORT_OK);
@@ -92,13 +92,57 @@ This documentation describes version 0.01
 
 =head1 DESCRIPTION
 
+CVR is a company registration number used in conjuction with VAT handling.
+
 =head2 validate
+
+The function takes a single argument, a 10 digit CVR number. 
+
+The function returns 1 (true) in case of a valid CVR number argument and  0 
+(false) in case of an invalid CVR number argument.
+
+The validation function goes through the following steps.
+
+Validation of the argument is done using the functions (all described below in 
+detail):
+
+=over
+
+=item _argument, exported by L<Business::DK::PO>
+
+=item _content, exported by L<Business::DK::PO>
+
+=item _length
+
+=back
+
+If the argument is a valid argument the sum is calculated by B<_calculate_sum>
+based on the argument and the controlcifers array.
+
+The sum returned is checked using a modulus caluculation and based on its
+validity either 1 or 0 is returned.
 
 =head1 PRIVATE FUNCTIONS
 
 =head2 _length
 
+This function validates the length of the argument, it dies if the argument
+does not fit wihtin the boundaries specified by the arguments provided:
+
+The B<_length> function takes the following arguments:
+
+=over
+
+=item number (mandatory), the number to be validated
+
+=item length required of number (mandatory)
+
+=back
+
 =head2 _calculate_sum
+
+This function takes an integer and calculates the sum bases on the the 
+controlcifer array.
 
 =head1 EXPORTS
 
