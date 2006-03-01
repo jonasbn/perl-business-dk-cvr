@@ -6,8 +6,10 @@
 \.old$
 \.gz$
 \.svn
+^\._
 ^blib/
 ^_build
+^cover_db
 ^Build$
 ^MakeMaker-\d
 ^filegroup$

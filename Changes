@@ -1,6 +1,13 @@
 Changes file for Business-DK-CVR
 
-$Id: Changes,v 1.2 2006-02-21 19:53:55 jonasbn Exp $
+$Id: Changes,v 1.3 2006-03-01 07:42:59 jonasbn Exp $
+
+Release 0.02 - Released Wed Mar 1 2006 Update not necessary
+
+- Added some more links to SEE ALSO section, apparently there is already a 
+  module on CPAN capable of validating CVR numbers this module does not use
+  the name CVR so I did no locate it prior to releasing this module to CPAN
+
 
 Release 0.01 - Released Mon Feb 21 2006
 

@@ -1,6 +1,6 @@
 package Business::DK::CVR;
 
-# $Id: CVR.pm,v 1.3 2006-02-21 19:53:55 jonasbn Exp $
+# $Id: CVR.pm,v 1.4 2006-03-01 07:42:59 jonasbn Exp $
 
 use strict;
 use vars qw($VERSION @ISA @EXPORT_OK);
@@ -9,7 +9,7 @@ use Business::DK::PO qw(_argument _content);
 
 require Exporter;
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(validate _length _calculate_sum);
 
@@ -68,7 +68,7 @@ Business::DK::CVR - a danish CVR (VAT Registration) code generator/validator
 
 =head1 VERSION
 
-This documentation describes version 0.01
+This documentation describes version 0.02
 
 =head1 SYNOPSIS
 
@@ -181,6 +181,10 @@ or by sending mail to
 =item L<Business::DK::PO>
 
 =item L<Business::DK::CPR>
+
+=item L<http://search.cpan.org/dist/Algorithm-CheckDigits>
+
+=item L<http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11_008.pm>
 
 =back
 
