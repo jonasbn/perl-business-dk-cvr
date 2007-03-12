@@ -1,16 +1,17 @@
 package Business::DK::CVR;
 
-# $Id: CVR.pm,v 1.4 2006-03-01 07:42:59 jonasbn Exp $
+# $Id: CVR.pm,v 1.5 2007-03-12 20:35:26 jonasbn Exp $
 
 use strict;
+use warnings;
 use vars qw($VERSION @ISA @EXPORT_OK);
 use Carp qw(croak);
 use Business::DK::PO qw(_argument _content);
 
 require Exporter;
 
-$VERSION = '0.02';
-@ISA = qw(Exporter);
+$VERSION   = '0.03';
+@ISA       = qw(Exporter);
 @EXPORT_OK = qw(validate _length _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;
@@ -18,44 +19,44 @@ use constant MODULUS_OPERAND => 11;
 my @controlcifers = qw(2 7 6 5 4 3 2 1);
 
 sub validate {
-	my $controlnumber = shift;
+    my $controlnumber = shift;
 
-	my $controlcode_length = scalar(@controlcifers);
+    my $controlcode_length = scalar(@controlcifers);
 
-	if (! $controlnumber) {
-		_argument($controlcode_length);
-	}
-	_content($controlnumber);
-	_length($controlnumber, $controlcode_length);
-	
-	my $sum = _calculate_sum($controlnumber, \@controlcifers);
-	
-	if ($sum%MODULUS_OPERAND) {
-		return 0;
-	} else {
-		return 1;
-	}	
+    if ( !$controlnumber ) {
+        _argument($controlcode_length);
+    }
+    _content($controlnumber);
+    _length( $controlnumber, $controlcode_length );
+
+    my $sum = _calculate_sum( $controlnumber, \@controlcifers );
+
+    if ( $sum % MODULUS_OPERAND ) {
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 sub _length {
-	my ($number, $length) = @_;
+    my ( $number, $length ) = @_;
 
-	if (length($number) != $length) {
-		croak "argument: $number has to be $length digits long";		
-	}
-	return 1;
+    if ( length($number) != $length ) {
+        croak "argument: $number has to be $length digits long";
+    }
+    return 1;
 }
 
 sub _calculate_sum {
-	my ($number, $controlcifers) = @_;
+    my ( $number, $controlcifers ) = @_;
 
-	my $sum = 0;
-	my @numbers = split(//, $number);
-	
-	for (my $i = 0; $i< scalar(@numbers); $i++) {
-		$sum += $numbers[$i] * $controlcifers->[$i];
-	}
-	return $sum;
+    my $sum = 0;
+    my @numbers = split( //, $number );
+
+    for ( my $i = 0; $i < scalar(@numbers); $i++ ) {
+        $sum += $numbers[$i] * $controlcifers->[$i];
+    }
+    return $sum;
 }
 
 1;
@@ -68,7 +69,7 @@ Business::DK::CVR - a danish CVR (VAT Registration) code generator/validator
 
 =head1 VERSION
 
-This documentation describes version 0.02
+This documentation describes version 0.03
 
 =head1 SYNOPSIS
 
