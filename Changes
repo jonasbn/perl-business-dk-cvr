@@ -1,8 +1,8 @@
 Changes file for Business-DK-CVR
 
-$Id: Changes,v 1.4 2007-03-12 20:35:26 jonasbn Exp $
+$Id: Changes,v 1.5 2007-03-12 20:36:39 jonasbn Exp $
 
-HEAD
+Release 0.03 - Released Mon Mar 12 2007 Update not necessary
 
 - Added Perl::Critic test, t/critic.t and related t/perlcriticrc
 
