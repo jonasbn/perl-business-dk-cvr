@@ -1,7 +1,13 @@
 Changes file for Business-DK-CVR
 
-$Id: Changes,v 1.5 2007-03-12 20:36:39 jonasbn Exp $
+$Id: Changes,v 1.6 2007-03-13 19:15:33 jonasbn Exp $
 
+Release 0.04 - Released Tue Mar 13 2007
+
+- Fixed problem in t/critic.t, I had implemented a mix of my own and the
+  recommended Perl::Critic test, so it gave unforseen test failures
+  
+  
 Release 0.03 - Released Mon Mar 12 2007 Update not necessary
 
 - Added Perl::Critic test, t/critic.t and related t/perlcriticrc
