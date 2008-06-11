@@ -1,8 +1,9 @@
 TODO file for Business-DK-CVR
 
-$Id: TODO,v 1.3 2006-07-02 13:23:26 jonasbn Exp $
+$Id: TODO,v 1.4 2008-06-11 08:08:00 jonasbn Exp $
+
+- Support for Data::FormValidator validator_packages?
+     #validator_packages => [qw(Data::FormValidator::Constraints::Business::DK::CVR)],
 
 - Add a calculator function?
-
-- Add capability of using subs as constraints in Data::FormValidator
 

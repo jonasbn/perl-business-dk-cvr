@@ -1,4 +1,105 @@
-README file for Business-DK-CVR
+NAME
+    Business::DK::CVR - a danish CVR (VAT Registration) code
+    generator/validator
 
-$Id: README,v 1.1 2006-02-20 21:37:04 jonasbn Exp $
+VERSION
+    This documentation describes version 0.04
+
+SYNOPSIS
+            use Business::DK::CVR qw(validate);
+
+            my $rv;
+            eval {
+                    $rv = validate(27355021);
+            };
+        
+            if ($@) {
+                    die "Code is not of the expected format - $@";
+            }
+        
+            if ($rv) {
+                    print "Code is valid";
+            } else {
+                    print "Code is not valid";
+            }
+
+DESCRIPTION
+    CVR is a company registration number used in conjuction with VAT
+    handling in Denmark.
+
+  validate
+
+    The function takes a single argument, a 10 digit CVR number.
+
+    The function returns 1 (true) in case of a valid CVR number argument and
+    0 (false) in case of an invalid CVR number argument.
+
+    The validation function goes through the following steps.
+
+    Validation of the argument is done using the functions (all described
+    below in detail):
+
+    _argument, exported by Business::DK::PO
+    _content, exported by Business::DK::PO
+    _length
+    If the argument is a valid argument the sum is calculated by
+    _calculate_sum based on the argument and the controlcifers array.
+
+    The sum returned is checked using a modulus caluculation and based on
+    its validity either 1 or 0 is returned.
+
+  generate
+
+PRIVATE FUNCTIONS
+  _length
+
+    This function validates the length of the argument, it dies if the
+    argument does not fit wihtin the boundaries specified by the arguments
+    provided:
+
+    The _length function takes the following arguments:
+
+    number (mandatory), the number to be validated
+    length required of number (mandatory)
+  _calculate_sum
+
+    This function takes an integer and calculates the sum bases on the the
+    controlcifer array.
+
+EXPORTS
+    Business::DK::CVR exports on request:
+
+    validate
+    _length
+    _calculate_sum
+TESTS
+    Coverage of the test suite is at 100%
+
+BUGS
+    Please report issues via CPAN RT:
+
+      http://rt.cpan.org/NoAuth/Bugs.html?Dist=Business-DK-CVR
+
+    or by sending mail to
+
+      bug-Business-DK-CVR@rt.cpan.org
+
+SEE ALSO
+    http://www.cpr.dk/
+    Business::DK::PO
+    Business::DK::CPR
+    http://search.cpan.org/dist/Algorithm-CheckDigits
+    http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M1
+    1_008.pm
+AUTHOR
+    Jonas B. Nielsen, (jonasbn) - `<jonasbn@cpan.org>'
+
+COPYRIGHT
+    Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2008
+
+    Business-DK-CVR is released under the artistic license
+
+    The distribution is licensed under the Artistic License, as specified by
+    the Artistic file in the standard perl distribution
+    (http://www.perl.com/language/misc/Artistic.html).
 

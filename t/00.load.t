@@ -1,8 +1,8 @@
-#pod test courtesy of petdance
-#http://use.perl.org/comments.pl?sid=18853&cid=28930
 
-# $Id: 00.load.t,v 1.1 2006-02-20 21:37:04 jonasbn Exp $
+# $Id: 00.load.t,v 1.2 2008-06-11 08:08:00 jonasbn Exp $
 
-use Test::More tests => 1;
+use strict;
+use Test::More tests => 2;
 
-BEGIN { use_ok( 'Business::DK::CVR' ); }
+use_ok( 'Business::DK::CVR' );
+use_ok( 'Data::FormValidator::Constraints::Business::DK::CVR' );

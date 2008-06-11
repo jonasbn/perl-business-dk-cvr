@@ -1,8 +1,34 @@
 Changes file for Business-DK-CVR
 
-$Id: Changes,v 1.6 2007-03-13 19:15:33 jonasbn Exp $
+$Id: Changes,v 1.7 2008-06-11 08:08:00 jonasbn Exp $
 
-Release 0.04 - Released Tue Mar 13 2007
+Release 0.05 - Update not necessary
+
+- Added requirement of Scalar::Util, we are stealing as much as we can from
+  Michael Peters's distribution:
+  
+    Data::FormValidator::Constraints::DateTime
+
+- Added a LICENSE file
+
+- Added LICENSE file and split COPYRIGHT and LICENSE section in POD into 
+  two separate sections
+
+- Restructured tests files to follow namespace in directory structure
+
+- Added recursive_test_files to Build.PL
+
+- Added create_readme to Build.PL
+
+- Introduced generate method so valid CVRs now can be generated randomly
+
+- Introduced Data::FormValidator::Constraints::Business::DK::CVR, this is sort
+  of an example application, it is however just a simple wrapper fitting into
+  the Data::FormValidator::Constraints framework - it is should be usable, not
+  just a demo, but still experimental
+
+
+Release 0.04 - Released Tue Mar 13 2007 Update not necessary
 
 - Fixed problem in t/critic.t, I had implemented a mix of my own and the
   recommended Perl::Critic test, so it gave unforseen test failures
