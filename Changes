@@ -2,7 +2,7 @@ Changes file for Business-DK-CVR
 
 $Id: Changes,v 1.7 2008-06-11 08:08:00 jonasbn Exp $
 
-Release 0.05 - Update not necessary
+Release 0.05 - Released Thu Nov  6 11:46:16 CET 2008 Update not necessary
 
 - Added requirement of Scalar::Util, we are stealing as much as we can from
   Michael Peters's distribution:

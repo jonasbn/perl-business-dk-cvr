@@ -17,6 +17,7 @@ my $build = Module::Build->new(
 		'Test::Exception'  => 0,
 		'Business::DK::PO' => 0.02,
 		'Scalar::Util'     => 0,
+		'Test::Taint'      => 0,
 	},
 );
 $build->create_build_script();

@@ -19,4 +19,5 @@ t/kwalitee.t
 t/perlcriticrc
 t/pod-coverage.t
 t/pod.t
+t/validate.t
 TODO
