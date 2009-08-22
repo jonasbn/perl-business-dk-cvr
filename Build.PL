@@ -14,10 +14,23 @@ my $build = Module::Build->new(
 	requires => {
 	    'Exporter'         => 0, #core
 		'Carp'             => 0, #core
-		'Test::Exception'  => 0,
 		'Business::DK::PO' => 0.02,
 		'Scalar::Util'     => 0,
-		'Test::Taint'      => 0,
 	},
+    build_requires       => {
+        'Test::More'          => '0',    #core
+        'Test::Exception'     => '0',
+		'Test::Perl::Critic'     => '0',
+		'Test::Prereq::Build'     => '0',
+		'Test::Taint'      => 0,
+    },
+    meta_merge => {
+        resources => {
+            homepage => 'http://logicLAB.jira.com/browse/BDKCVR',
+            bugtracker =>
+                'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Business-DK-CVR',
+            repository => 'http://logicLAB.jira.com/svn/BDKCVR',
+        }
+    },
 );
 $build->create_build_script();
