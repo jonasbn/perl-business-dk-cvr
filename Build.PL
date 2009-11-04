@@ -26,6 +26,7 @@ my $build = Module::Build->new(
 		'Test::Prereq::Build' => '0',
 		'Test::Taint'         => '0',
 		'Test::Kwalitee'      => '0',
+        'Taint::Runtime'      => '0',
 	},
 	meta_merge => {
 		resources => {
