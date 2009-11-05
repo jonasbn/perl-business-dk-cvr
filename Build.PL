@@ -27,6 +27,7 @@ my $build = Module::Build->new(
 		'Test::Taint'         => '0',
 		'Test::Kwalitee'      => '0',
         'Taint::Runtime'      => '0',
+        'Data::FormValidator' => '0',
 	},
 	meta_merge => {
 		resources => {
