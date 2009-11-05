@@ -51,7 +51,7 @@ sub _calculate_sum {
     my ( $number, $controlcifers ) = @_;
 
     my $sum = 0;
-    my @numbers = split //mx, $number;
+    my @numbers = split //smx, $number;
 
     for ( my $i = 0; $i < scalar @numbers; $i++ ) {
         $sum += $numbers[$i] * $controlcifers->[$i];
