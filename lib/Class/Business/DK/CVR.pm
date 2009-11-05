@@ -12,17 +12,17 @@ use Business::DK::CVR qw(validate);
 
 our $VERSION = '0.01';
 
-private number => my %number;     # read-only accessor: number()
+private number => my %number;    # read-only accessor: number()
 
 sub new {
-    my ($class, $number) = @_;
-    
-    my $self = \( my $scalar );
-    
+    my ( $class, $number ) = @_;
+
+    my $self = {};
+
     bless $self, $class;
-    
-    register( $self );
-    
+
+    register($self);
+
     if ($number) {
         $self->set_number($number);
     } else {
@@ -32,24 +32,25 @@ sub new {
     return $self;
 }
 
-sub number { $number{ id $_[0] } }
+sub number { my $self = shift; return $number{ id $self } }
 
-sub get_number { $number{ id $_[0] } }
+sub get_number { my $self = shift; return $number{ id $self } }
 
 sub set_number {
-    
+    my ( $self, $unvalidated_cvr ) = @_;
+
     my $rv;
-    
-    if ($_[1]) {
-        eval { $rv = validate($_[1]); };
-    
-        if ($EVAL_ERROR or not $rv) {
+
+    if ($unvalidated_cvr) {
+        eval { $rv = validate($unvalidated_cvr); 1; } or 0;
+
+        if ( $EVAL_ERROR or not $rv ) {
             croak 'Invalid CVR number parameter';
-            
+
         } else {
-            $number{ id $_[0] } = $_[1];
+            $number{ id $self } = $unvalidated_cvr;
             return 1;
-            
+
         }
     } else {
         croak 'You must provide a CVR number';
