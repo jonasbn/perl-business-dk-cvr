@@ -50,7 +50,7 @@ sub match_valid_cvr {
 
     #my $cvr = $dfv->get_current_constraint_value;
 
-    my ($untainted_cvr) = $cvr =~ m/\b(\d{8})\b/mx;
+    my ($untainted_cvr) = $cvr =~ m/\b(\d{8})\b/smx;
 
     return $dfv->untainted_constraint_value($untainted_cvr);
 }
