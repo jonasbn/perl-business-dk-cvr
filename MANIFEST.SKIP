@@ -47,3 +47,6 @@ drafts
 ^protos
 ^bin
 ^scripts
+
+# Test::Kwalitee generated
+Debian_CPANTS.txt
