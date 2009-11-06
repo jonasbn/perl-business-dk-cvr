@@ -76,12 +76,18 @@ The documentation describes version 0.01 of Class::Business::DK::CVR
     use Class::Business::DK::CVR;
 
     my $cvr = Class::Business::DK::CVR->new(27355021);
+    
+    my $cvr_no = $cvr->get_number();
+    
+    my $cvr_no = $cvr->number();
+
+    $cvr->set_number(27355021);
 
 =head1 DESCRIPTION
 
-This module exposes a set of subroutines which are compatible with
-L<Data::FormValidator>. The module implements contraints as specified in
-L<Data::FormValidator::Constraints>.
+This is an OOP implementation for handling Danish CVR numbers. The class gives
+you an CVR object, which is validated according to the CVR rules, see:
+L<Business::DK::CVR>.
 
 =head1 SUBROUTINES AND METHODS
 
