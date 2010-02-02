@@ -208,6 +208,10 @@ based on the argument and the controlcifers array.
 The sum returned is checked using a modulus caluculation and based on its
 validity either 1 or 0 is returned.
 
+=head2 validateCVR
+
+Better name for export. This is just a wrapper for L</validate>
+
 =head2 generate
 
 Generate is a function which generates valid CVR numbers, it is by no means
