@@ -11,12 +11,16 @@ use Business::DK::PO qw(_argument _content);
 use base qw(Exporter);
 
 $VERSION   = '0.05';
-@EXPORT_OK = qw(validate generate _length _calculate_sum);
+@EXPORT_OK = qw(validate validateCVR generate _length _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;
 use constant MAX_CVRS        => 9090908;
 
 my @controlcifers = qw(2 7 6 5 4 3 2 1);
+
+sub validateCVR {
+    validate(shift);
+}
 
 sub validate {
     my $controlnumber = shift;
@@ -135,6 +139,37 @@ This documentation describes version 0.05 of Business::DK::CVR
         print "Code is not valid";
     }
 
+    #Using with Params::Validate
+    #See also examples/
+    
+    use Params::Validate qw(:all);
+    use Business::DK::CVR qw(validateCVR);
+    
+    eval {
+        check_cvr(cvr => 27355021);
+    };
+    
+    if ($@) {
+        print "CVR is not valid - $@\n";
+    }
+    
+    eval {
+        check_cvr(cvr => 27355020);
+    };
+    
+    if ($@) {
+        print "CVR is not valid - $@\n";
+    }
+    
+    sub check_cvr {
+        validate( @_,
+        { cvr =>
+            { callbacks =>
+                { 'validate_cvr' => sub { validateCVR($_[0]); } } } } );
+        
+        print $_[1]." is a valid CVR\n";
+    
+    }
 
 =head1 DESCRIPTION
 
