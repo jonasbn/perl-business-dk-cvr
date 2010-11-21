@@ -44,7 +44,8 @@ Business-DK-CVR-[\d\.\_]+.tar.gz
 \.releaserc
 drafts
 ^docs
-^Business-DK-CVR.kpf$
+\.kpf$
+\.komodoproject$
 ^protos
 ^bin
 ^scripts
