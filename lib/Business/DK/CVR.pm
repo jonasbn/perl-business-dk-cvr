@@ -7,6 +7,7 @@ use warnings;
 use vars qw($VERSION @EXPORT_OK);
 use Carp qw(croak);
 use Business::DK::PO qw(_argument _content);
+use Params::Validate qw(validate_pos SCALAR OBJECT );
 
 use base qw(Exporter);
 
@@ -64,17 +65,18 @@ sub _calculate_sum {
 }
 
 sub generate {
-    my ( $self, $amount, $seed ) = @_;
+    my @array = validate_pos( @_,
+        { type => OBJECT | SCALAR, optional => 1 },
+        { type => SCALAR, optional => 1, default => 1 },
+        { type => SCALAR, optional => 1, default => 1 },
+    );
 
-    if ( not $amount ) {
-        $amount = 1;
-    }
+    my ( $self, $amount, $seed ) = @array;
 
-    if ( not $seed ) {
-        $seed = 1;
-    }
+    #my ( $self, $amount, $seed )
+    #    = ( $hash_ref->{0}, $hash_ref->{1}, $hash_ref->{2} );
 
-    if ( ( !ref $self ) and ( $self ne 'Business::DK::CVR' ) ) {
+    if ( defined $self and $self =~ m/\d+/ ) {
         $seed   = $amount;
         $amount = $self;
     }

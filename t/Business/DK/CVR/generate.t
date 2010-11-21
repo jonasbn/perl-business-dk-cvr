@@ -15,6 +15,10 @@ ok(@cvrs = Business::DK::CVR->generate());
 
 is(scalar @cvrs, 1);
 
+ok(@cvrs = Business::DK::CVR::generate());
+
+is(scalar @cvrs, 1);
+
 ok($cvr = Business::DK::CVR->generate());
 
 like($cvr, qr/\b\d{8}\b/);
@@ -23,7 +27,15 @@ ok($cvr = Business::DK::CVR->generate(2));
 
 is(ref $cvr, 'ARRAY');
 
+ok($cvr = Business::DK::CVR::generate(2));
+
+is(ref $cvr, 'ARRAY');
+
 ok($cvr = Business::DK::CVR->generate(1, 19));
+
+is($cvr, '00000019');
+
+ok($cvr = Business::DK::CVR::generate(1, 19));
 
 is($cvr, '00000019');
 
