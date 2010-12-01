@@ -52,3 +52,4 @@ drafts
 
 # Test::Kwalitee generated
 Debian_CPANTS.txt
+^MYMETA.yml$
