@@ -8,6 +8,7 @@ use vars qw($VERSION @EXPORT_OK);
 use Carp qw(croak);
 use Business::DK::PO qw(_argument _content);
 use Params::Validate qw(validate_pos SCALAR OBJECT );
+use Readonly;
 
 use base qw(Exporter);
 
@@ -17,7 +18,7 @@ $VERSION   = '0.05';
 use constant MODULUS_OPERAND => 11;
 use constant MAX_CVRS        => 9090908;
 
-my @controlcifers = qw(2 7 6 5 4 3 2 1);
+Readonly my @controlcifers => qw(2 7 6 5 4 3 2 1);
 
 sub validateCVR {
     validate(shift);
