@@ -17,6 +17,8 @@ $VERSION   = '0.05';
 
 use constant MODULUS_OPERAND => 11;
 use constant MAX_CVRS        => 9090908;
+use constant VALID           => 1;
+use constant INVALID         => 0;
 
 Readonly my @controlcifers => qw(2 7 6 5 4 3 2 1);
 
@@ -38,9 +40,9 @@ sub validate {
     my $sum = _calculate_sum( $controlnumber, \@controlcifers );
 
     if ( $sum % MODULUS_OPERAND ) {
-        return 0;
+        return INVALID;
     } else {
-        return 1;
+        return VALID;
     }
 }
 
