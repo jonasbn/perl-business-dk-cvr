@@ -11,7 +11,7 @@ use Readonly;
 
 use base qw(Exporter);
 
-$VERSION   = '0.05';
+$VERSION   = '0.06';
 @EXPORT_OK = qw(validate validateCVR generate _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;
@@ -111,7 +111,7 @@ Business::DK::CVR - Danish CVR (VAT Registration) code generator/validator
 
 =head1 VERSION
 
-This documentation describes version 0.05 of Business::DK::CVR
+This documentation describes version 0.06 of Business::DK::CVR
 
 =head1 SYNOPSIS
 
@@ -179,20 +179,6 @@ The function takes a single argument, a 10 digit CVR number.
 The function returns 1 (true) in case of a valid CVR number argument and  0 
 (false) in case of an invalid CVR number argument.
 
-The validation function goes through the following steps.
-
-Validation of the argument is done using the functions (all described below in detail):
-
-=over
-
-=item L<Business::DK::PO/_argument>, exported by L<Business::DK::PO>
-
-=item L<Business::DK::PO/_content>, exported by L<Business::DK::PO>
-
-=item L</_length>
-
-=back
-
 If the argument is a valid argument the sum is calculated by B<_calculate_sum>
 based on the argument and the controlcifers array.
 
@@ -211,21 +197,6 @@ authorities, but it can be used to generate example CVRs for testing and so on.
 
 =head1 PRIVATE FUNCTIONS
 
-=head2 _length
-
-This function validates the length of the argument, it dies if the argument
-does not fit wihtin the boundaries specified by the arguments provided:
-
-The B<_length> function takes the following arguments:
-
-=over
-
-=item number (mandatory), the number to be validated
-
-=item length required of number (mandatory)
-
-=back
-
 =head2 _calculate_sum
 
 This function takes an integer and calculates the sum bases on the the 
@@ -241,8 +212,6 @@ Business::DK::CVR exports on request:
 
 =item L</generate>
 
-=item L</_length>
-
 =item L</_calculate_sum>
 
 =back
@@ -257,11 +226,6 @@ The number of valid CVRs are limited, so if the user requests a number of CVRs
 to be generated which exceeds the upper limit, this error is instantiated.
 See: L</generate>.
 
-=item * argument: $number has to be $length digits long
-
-If the number in $number does not match the specified length, this error
-is issued. See: L</_length>.
-
 =back
 
 =head1 CONFIGURATION AND ENVIRONMENT
@@ -272,7 +236,21 @@ The module requires no special configuration or environment to run.
 
 =over
 
-=item L<Business::DK::PO>
+=item * L<Params::Validate>
+
+=item * L<Exporter>
+
+=item * L<Carp>
+
+=item * L<Scalar::Util>
+
+=item * L<Class::InsideOut>
+
+=item * L<English>
+
+=item * L<Params::Validate>
+
+=item * L<Readonly>
 
 =back
 
@@ -330,7 +308,7 @@ Jonas B. Nielsen, (jonasbn) - C<< <jonasbn@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2008
+Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2011
 
 =head1 LICENSE
 
