@@ -2,6 +2,15 @@ Changes file for Business-DK-CVR
 
 $Id: Changes,v 1.7 2008-06-11 08:08:00 jonasbn Exp $
 
+Release 0.06, Released Feb 2011 Update not necessary
+
+- Added use of Params::Validate in key places and phased out use of Business::DK::PO
+
+- Made control cifers Readonly
+
+- The _length method has been removed, since it's use was obsoleted
+
+
 Release 0.05 - Released Thu Nov  6 11:46:16 CET 2008 Update not necessary
 
 - Add object oriented variant implementation [BDKCVR-1], introducing
