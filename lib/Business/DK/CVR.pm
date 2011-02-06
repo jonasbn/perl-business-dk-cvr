@@ -21,7 +21,7 @@ use constant MAX_CVRS        => 9090908;
 Readonly my @controlcifers => qw(2 7 6 5 4 3 2 1);
 
 sub validateCVR {
-    validate(shift);
+    return validate(shift);
 }
 
 sub validate {
