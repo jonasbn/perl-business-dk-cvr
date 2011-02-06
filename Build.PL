@@ -19,6 +19,7 @@ my $build = Module::Build->new(
 		'Class::InsideOut' => '0',
 		'English'          => '0',
         'Params::Validate' => '0',
+        'Readonly'         => '0',
 	},
 	build_requires => {
 		'Test::More'          => '0',    #core
