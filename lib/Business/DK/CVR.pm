@@ -6,14 +6,13 @@ use strict;
 use warnings;
 use vars qw($VERSION @EXPORT_OK);
 use Carp qw(croak);
-use Business::DK::PO qw(_argument _content);
-use Params::Validate qw(validate_pos SCALAR OBJECT );
+use Params::Validate qw(validate_pos SCALAR OBJECT ARRAYREF );
 use Readonly;
 
 use base qw(Exporter);
 
 $VERSION   = '0.05';
-@EXPORT_OK = qw(validate validateCVR generate _length _calculate_sum);
+@EXPORT_OK = qw(validate validateCVR generate _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;
 use constant MAX_CVRS        => 9090908;
@@ -27,15 +26,9 @@ sub validateCVR {
 }
 
 sub validate {
-    my $controlnumber = shift;
+    my ($controlnumber) = @_;
 
-    my $controlcode_length = scalar @controlcifers;
-
-    if ( !$controlnumber ) {
-        _argument($controlcode_length);
-    }
-    _content($controlnumber);
-    _length( $controlnumber, $controlcode_length );
+    validate_pos( @_, { type => SCALAR, regex => qr/^\d{8}$/ } );
 
     my $sum = _calculate_sum( $controlnumber, \@controlcifers );
 
@@ -46,17 +39,13 @@ sub validate {
     }
 }
 
-sub _length {
-    my ( $number, $length ) = @_;
-
-    if ( length($number) != $length ) {
-        croak "argument: $number has to be $length digits long";
-    }
-    return 1;
-}
-
 sub _calculate_sum {
     my ( $number, $controlcifers ) = @_;
+
+    validate_pos( @_,
+        { type => SCALAR, regex => qr/^\d+$/ },
+        { type => ARRAYREF },
+    );
 
     my $sum = 0;
     my @numbers = split //smx, $number;
@@ -75,9 +64,6 @@ sub generate {
     );
 
     my ( $self, $amount, $seed ) = @array;
-
-    #my ( $self, $amount, $seed )
-    #    = ( $hash_ref->{0}, $hash_ref->{1}, $hash_ref->{2} );
 
     if ( defined $self and $self =~ m/\d+/ ) {
         $seed   = $amount;

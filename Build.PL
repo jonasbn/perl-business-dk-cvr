@@ -14,7 +14,6 @@ my $build = Module::Build->new(
 	requires             => {
 		'Exporter'         => '0',      #core
 		'Carp'             => '0',      #core
-		'Business::DK::PO' => '0.02',
 		'Scalar::Util'     => '0',
 		'Class::InsideOut' => '0',
 		'English'          => '0',
