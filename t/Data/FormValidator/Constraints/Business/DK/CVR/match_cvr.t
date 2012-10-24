@@ -4,12 +4,19 @@
 
 use strict;
 use warnings;
-use Test::More tests => 13;
+use Test::More;
 use Test::Taint;
 use Data::FormValidator;
-
+use Env qw($TEST_COVERAGE);
 use Taint::Runtime qw(enable taint_start taint_enabled);
-taint_start();
+
+if ($TEST_COVERAGE) {
+	plan skip_all => 'Devel::Cover does not play well with taint mode';
+} else {
+	plan tests => 13;
+}
+		
+taint_start() unless $TEST_COVERAGE;
 
 taint_checking_ok('Is taint checking on');
 
