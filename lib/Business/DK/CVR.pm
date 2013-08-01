@@ -11,7 +11,7 @@ use Readonly;
 
 use base qw(Exporter);
 
-$VERSION   = '0.06';
+$VERSION   = '0.07';
 @EXPORT_OK = qw(validate validateCVR generate _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;

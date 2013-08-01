@@ -1,8 +1,31 @@
-Changes file for Business-DK-CVR
+Changes file for Business::DK::CVR
 
 $Id: Changes,v 1.7 2008-06-11 08:08:00 jonasbn Exp $
 
-Release 0.06, Released Feb 2011 Update not necessary
+The project Changelog is available at:
+
+http://logiclab.jira.com/browse/BDKCVR#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
+
+0.07 2013-08-01
+
+- Maintenance release, update no required 
+
+- Fixed up Changes file as part of my Questhub quest adhering to the standard
+  described in: CPAN::Changes::Spec [BDKCVR-8]
+
+  Quest: http://questhub.io/realm/perl/quest/51f0fd8e18ba7dcf4b000040
+  Spec: https://metacpan.org/module/CPAN::Changes::Spec
+  
+  https://logiclab.jira.com/browse/BDKCVR-8
+
+- Added contemporay boiler plate of Perl::Critic test [BDKCVR-5]  
+  
+  https://logiclab.jira.com/browse/BDKCVR-5
+  
+
+0.06 2011-02
+
+- Update not necessary
 
 - Added use of Params::Validate in key places and phased out use of Business::DK::PO
 
@@ -11,7 +34,9 @@ Release 0.06, Released Feb 2011 Update not necessary
 - The _length method has been removed, since it's use was obsoleted
 
 
-Release 0.05 - Released Thu Nov  6 11:46:16 CET 2008 Update not necessary
+0.05 2008-06-11
+
+- Update not necessary
 
 - Add object oriented variant implementation [BDKCVR-1], introducing
   Class::Business::DK::CVR
@@ -42,13 +67,17 @@ Release 0.05 - Released Thu Nov  6 11:46:16 CET 2008 Update not necessary
   just a demo, but still experimental
 
 
-Release 0.04 - Released Tue Mar 13 2007 Update not necessary
+0.04 2007-03-13
+
+- Update not necessary
 
 - Fixed problem in t/critic.t, I had implemented a mix of my own and the
   recommended Perl::Critic test, so it gave unforseen test failures
   
   
-Release 0.03 - Released Mon Mar 12 2007 Update not necessary
+0.03 2007-03-12
+
+- Update not necessary
 
 - Added Perl::Critic test, t/critic.t and related t/perlcriticrc
 
@@ -62,13 +91,15 @@ Release 0.03 - Released Mon Mar 12 2007 Update not necessary
   This seem to be the defacto way of doing things.
 
 
-Release 0.02 - Released Wed Mar 1 2006 Update not necessary
+0.02 2006-03-01
+
+- Update not necessary
 
 - Added some more links to SEE ALSO section, apparently there is already a 
   module on CPAN capable of validating CVR numbers this module does not use
   the name CVR so I did no locate it prior to releasing this module to CPAN
 
 
-Release 0.01 - Released Mon Feb 21 2006
+0.01 2006-02-21
 
 - Initial version
