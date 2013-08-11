@@ -6,6 +6,13 @@ The project Changelog is available at:
 
 http://logiclab.jira.com/browse/BDKCVR#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
+HEAD
+
+- Added changes.t automatic assertion of the integrity of the Changes file, see also BDKCVR-8 [BDKCVR-9]
+
+https://logiclab.jira.com/browse/BDKCVR-9
+
+
 0.07 2013-08-01
 
 - Maintenance release, update no required 
