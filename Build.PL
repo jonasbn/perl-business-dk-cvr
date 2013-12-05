@@ -35,7 +35,11 @@ my $build = Module::Build->new(
 			homepage => 'http://logicLAB.jira.com/browse/BDKCVR',
 			bugtracker =>
 				'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Business-DK-CVR',
-			repository => 'http://logicLAB.jira.com/svn/BDKCVR',
+            repository => 'https://github.com/jonasbn/bdkcvr',
+            ProjectChangelog =>
+                'http://logiclab.jira.com/browse/BDKCVR#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel',
+            ProjectSite => 'http://logicLAB.jira.com/browse/BDKCVR',
+            ProjectWiki => 'http://logiclab.jira.com/wiki/display/BDKCVR/Home',
 		}
 	},
 );
