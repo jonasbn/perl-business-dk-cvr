@@ -55,3 +55,6 @@ drafts
 Debian_CPANTS.txt
 ^MYMETA.yml$
 ^MYMETA\.json$
+
+# Github - Travis integration
+\.travis\.yml
