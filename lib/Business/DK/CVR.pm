@@ -158,7 +158,7 @@ This documentation describes version 0.06 of Business::DK::CVR
             { callbacks =>
                 { 'validate_cvr' => sub { validateCVR($_[0]); } } } } );
         
-        print $_[1]." is a valid CVR\n";
+        print "$_[0] is a valid CVR\n";
     
     }
 
