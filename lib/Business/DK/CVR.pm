@@ -167,7 +167,7 @@ This documentation describes version 0.06 of Business::DK::CVR
 CVR is a company registration number used in conjuction with VAT handling in
 Denmark.
 
-If you want to use this module in conjunction please check:
+If you want to use this module with L<Data::FormValidator> please check:
 L<Data::FormValidator::Constraints::Business::DK::CVR>
 
 =head1 SUBROUTINES AND METHODS
