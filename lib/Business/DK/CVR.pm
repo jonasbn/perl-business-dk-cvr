@@ -8,6 +8,7 @@ use vars qw($VERSION @EXPORT_OK);
 use Carp qw(croak);
 use Params::Validate qw(validate_pos SCALAR OBJECT ARRAYREF );
 use Readonly;
+use 5.008; #5.8.0
 
 use base qw(Exporter);
 
