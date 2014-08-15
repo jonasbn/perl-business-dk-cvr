@@ -8,7 +8,7 @@ http://logiclab.jira.com/browse/BDKCVR#selectedTab=com.atlassian.jira.plugin.sys
 
 0.08 2014-08-15
 
-- Maintenance release, update no required
+- Maintenance release, update not required
 
 - Addressing Kwalitee, aligning version for version consistency in
   modules in distribution
