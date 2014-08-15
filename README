@@ -49,7 +49,7 @@ SYNOPSIS
                 { callbacks =>
                     { 'validate_cvr' => sub { validateCVR($_[0]); } } } } );
         
-            print $_[1]." is a valid CVR\n";
+            print "$_[0] is a valid CVR\n";
     
         }
 
@@ -57,7 +57,7 @@ DESCRIPTION
     CVR is a company registration number used in conjuction with VAT
     handling in Denmark.
 
-    If you want to use this module in conjunction please check:
+    If you want to use this module with Data::FormValidator please check:
     Data::FormValidator::Constraints::Business::DK::CVR
 
 SUBROUTINES AND METHODS

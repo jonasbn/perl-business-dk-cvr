@@ -16,7 +16,7 @@ use base 'Exporter';
 use constant VALID   => 1;
 use constant INVALID => undef;
 
-$VERSION = '0.01';
+$VERSION = '0.08';
 
 sub valid_cvr {
     return sub {
