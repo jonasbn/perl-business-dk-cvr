@@ -58,3 +58,7 @@ Debian_CPANTS.txt
 
 # Github - Travis integration
 \.travis\.yml
+
+# SublimeText 2 project files
+\.sublime-project
+\.sublime-workspace
