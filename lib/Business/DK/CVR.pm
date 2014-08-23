@@ -110,7 +110,7 @@ Business::DK::CVR - Danish CVR (VAT Registration) code generator/validator
 
 =head1 VERSION
 
-This documentation describes version 0.06 of Business::DK::CVR
+This documentation describes version 0.09 of Business::DK::CVR
 
 =head1 SYNOPSIS
 
@@ -307,7 +307,7 @@ Jonas B. Nielsen, (jonasbn) - C<< <jonasbn@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2011
+Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2014
 
 =head1 LICENSE
 
