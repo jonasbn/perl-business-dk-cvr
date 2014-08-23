@@ -19,7 +19,7 @@ my $build = Module::Build->new(
         'English'          => '0',
         'Params::Validate' => '0',
         'Readonly'         => '0',
-        'perl'             => '5.8.0',
+        'perl'             => '5.008',
     },
     build_requires => {
         'Test::More'          => '0',    #core
