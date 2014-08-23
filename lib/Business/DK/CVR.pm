@@ -1,7 +1,5 @@
 package Business::DK::CVR;
 
-# $Id: CVR.pm,v 1.7 2008-06-11 08:08:00 jonasbn Exp $
-
 use strict;
 use warnings;
 use vars qw($VERSION @EXPORT_OK);

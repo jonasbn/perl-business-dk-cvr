@@ -1,7 +1,5 @@
 package Data::FormValidator::Constraints::Business::DK::CVR;
 
-# $Id: CVR.pm,v 1.1 2008-06-11 08:08:00 jonasbn Exp $
-
 use strict;
 use warnings;
 use vars qw(@ISA $VERSION @EXPORT_OK);
