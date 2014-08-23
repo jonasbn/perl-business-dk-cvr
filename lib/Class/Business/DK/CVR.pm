@@ -10,7 +10,7 @@ use English qw(-no_match_vars);
 
 use Business::DK::CVR qw(validate);
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 private number => my %number;    # read-only accessor: number()
 
