@@ -289,15 +289,15 @@ or by sending mail to
 
 =item L<http://www.cvr.dk/>
 
-=item L<Business::DK::PO>
+=item L<Business::DK::CPR>, validation of Danish social security numbers
 
-=item L<Business::DK::CPR>
+=item L<http://search.cpan.org/dist/Algorithm-CheckDigits>, an alternative implementation
 
-=item L<http://search.cpan.org/dist/Algorithm-CheckDigits>
+=item L<http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11_008.pm>, see above
 
-=item L<http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11_008.pm>
+=item L<Data::FormValidator::Constraints::Business::DK::CVR>, a validator for DFV, included in this distribution
 
-=item L<Data::FormValidator::Constraints::Business::DK::CVR>
+=item L<Business::Tax::VAT>, for VAT rates and doing VAT calculations
 
 =back
 
