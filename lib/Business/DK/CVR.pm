@@ -106,7 +106,7 @@ __END__
 
 =head1 NAME
 
-Business::DK::CVR - Danish CVR (VAT Registration) code generator/validator
+Business::DK::CVR - Danish CVR (VAT Registration) number generator/validator
 
 =head1 VERSION
 
