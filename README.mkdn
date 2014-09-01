@@ -1,13 +1,14 @@
 [![CPAN version](https://badge.fury.io/pl/Business-DK-CVR.svg)](http://badge.fury.io/pl/Business-DK-CVR)
 [![Build Status](https://travis-ci.org/jonasbn/bdkcvr.svg?branch=master)](https://travis-ci.org/jonasbn/bdkcvr)
+[![Coverage Status](https://coveralls.io/repos/jonasbn/bdkcvr/badge.png)](https://coveralls.io/r/jonasbn/bdkcvr)
 
 # NAME
 
-Business::DK::CVR - Danish CVR (VAT Registration) code generator/validator
+Business::DK::CVR - Danish CVR (VAT Registration) number generator/validator
 
 # VERSION
 
-This documentation describes version 0.06 of Business::DK::CVR
+This documentation describes version 0.09 of Business::DK::CVR
 
 # SYNOPSIS
 
@@ -158,11 +159,11 @@ or by sending mail to
 # SEE ALSO
 
 - [http://www.cvr.dk/](http://www.cvr.dk/)
-- [Business::DK::PO](https://metacpan.org/pod/Business::DK::PO)
-- [Business::DK::CPR](https://metacpan.org/pod/Business::DK::CPR)
-- [http://search.cpan.org/dist/Algorithm-CheckDigits](http://search.cpan.org/dist/Algorithm-CheckDigits)
-- [http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11\_008.pm](http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11_008.pm)
-- [Data::FormValidator::Constraints::Business::DK::CVR](https://metacpan.org/pod/Data::FormValidator::Constraints::Business::DK::CVR)
+- [Business::DK::CPR](https://metacpan.org/pod/Business::DK::CPR), validation of Danish social security numbers
+- [http://search.cpan.org/dist/Algorithm-CheckDigits](http://search.cpan.org/dist/Algorithm-CheckDigits), an alternative implementation
+- [http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11\_008.pm](http://search.cpan.org/~mamawe/Algorithm-CheckDigits-0.38/CheckDigits/M11_008.pm), see above
+- [Data::FormValidator::Constraints::Business::DK::CVR](https://metacpan.org/pod/Data::FormValidator::Constraints::Business::DK::CVR), a validator for DFV, included in this distribution
+- [Business::Tax::VAT](https://metacpan.org/pod/Business::Tax::VAT), for VAT rates and doing VAT calculations
 
 # AUTHOR
 
@@ -170,7 +171,7 @@ Jonas B. Nielsen, (jonasbn) - `<jonasbn@cpan.org>`
 
 # COPYRIGHT
 
-Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2011
+Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2014
 
 # LICENSE
 
