@@ -273,14 +273,6 @@ The module has no known bugs or limitations.
 
 Coverage of the test suite is at 100%
 
-=head1 TODO
-
-=over
-
-=item * Get the generate method thorougly tested
-
-=back
-
 =head1 BUG REPORTING
 
 Please report issues via CPAN RT:
