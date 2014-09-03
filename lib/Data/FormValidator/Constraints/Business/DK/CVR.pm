@@ -196,10 +196,6 @@ Business-DK-CVR and related is (C) by Jonas B. Nielsen, (jonasbn) 2006-2014
 
 =head1 LICENSE
 
-Business-DK-CVR and related is released under the artistic license
-
-The distribution is licensed under the Artistic License, as specified
-by the Artistic file in the standard perl distribution
-(http://www.perl.com/language/misc/Artistic.html).
+Business-DK-CVR and related is released under the Artistic License 2.0
 
 =cut

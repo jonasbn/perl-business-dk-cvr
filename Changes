@@ -4,6 +4,11 @@ The project Changelog is available at:
 
 http://logiclab.jira.com/browse/BDKCVR#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
 
+- Migrating build system from Module::Build to Dist::Zilla
+
+- Upgrading license from Artistic 1.0 to Artistic 2.0
+
+
 0.09 2014-08-23, maintenance release, update not required
 
 - Added specification of required Perl version, settling for
