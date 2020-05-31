@@ -8,7 +8,7 @@ Business::DK::CVR - Danish CVR (VAT Registration) number generator/validator
 
 # VERSION
 
-This documentation describes version 0.09 of Business::DK::CVR
+This documentation describes version 0.10 of Business::DK::CVR
 
 # SYNOPSIS
 
@@ -29,34 +29,34 @@ This documentation describes version 0.09 of Business::DK::CVR
 
     #Using with Params::Validate
     #See also examples/
-    
+
     use Params::Validate qw(:all);
     use Business::DK::CVR qw(validateCVR);
-    
+
     eval {
         check_cvr(cvr => 27355021);
     };
-    
+
     if ($@) {
         print "CVR is not valid - $@\n";
     }
-    
+
     eval {
         check_cvr(cvr => 27355020);
     };
-    
+
     if ($@) {
         print "CVR is not valid - $@\n";
     }
-    
+
     sub check_cvr {
         validate( @_,
         { cvr =>
             { callbacks =>
                 { 'validate_cvr' => sub { validateCVR($_[0]); } } } } );
-        
+
         print "$_[0] is a valid CVR\n";
-    
+
     }
 
 # DESCRIPTION
@@ -71,9 +71,9 @@ If you want to use this module with [Data::FormValidator](https://metacpan.org/p
 
 ## validate
 
-The function takes a single argument, a 10 digit CVR number. 
+The function takes a single argument, a 10 digit CVR number.
 
-The function returns 1 (true) in case of a valid CVR number argument and  0 
+The function returns 1 (true) in case of a valid CVR number argument and  0
 (false) in case of an invalid CVR number argument.
 
 If the argument is a valid argument the sum is calculated by **\_calculate\_sum**
@@ -96,7 +96,7 @@ authorities, but it can be used to generate example CVRs for testing and so on.
 
 ## \_calculate\_sum
 
-This function takes an integer and calculates the sum bases on the the 
+This function takes an integer and calculates the sum bases on the the
 controlcifer array.
 
 # EXPORTS
@@ -167,7 +167,7 @@ Jonas B. Nielsen, (jonasbn) - `<jonasbn@cpan.org>`
 
 # COPYRIGHT
 
-Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2014
+Business-DK-CVR and related is (C) by Jonas B., (jonasbn) 2006-2020
 
 # LICENSE
 

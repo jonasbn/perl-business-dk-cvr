@@ -10,7 +10,7 @@ use 5.008; #5.8.0
 
 use base qw(Exporter);
 
-$VERSION   = '0.09';
+$VERSION   = '0.10';
 @EXPORT_OK = qw(validate validateCVR generate _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;
@@ -118,7 +118,7 @@ Business::DK::CVR - Danish CVR (VAT Registration) number generator/validator
 
 =head1 VERSION
 
-This documentation describes version 0.09 of Business::DK::CVR
+This documentation describes version 0.10 of Business::DK::CVR
 
 =head1 SYNOPSIS
 
@@ -139,34 +139,34 @@ This documentation describes version 0.09 of Business::DK::CVR
 
     #Using with Params::Validate
     #See also examples/
-    
+
     use Params::Validate qw(:all);
     use Business::DK::CVR qw(validateCVR);
-    
+
     eval {
         check_cvr(cvr => 27355021);
     };
-    
+
     if ($@) {
         print "CVR is not valid - $@\n";
     }
-    
+
     eval {
         check_cvr(cvr => 27355020);
     };
-    
+
     if ($@) {
         print "CVR is not valid - $@\n";
     }
-    
+
     sub check_cvr {
         validate( @_,
         { cvr =>
             { callbacks =>
                 { 'validate_cvr' => sub { validateCVR($_[0]); } } } } );
-        
+
         print "$_[0] is a valid CVR\n";
-    
+
     }
 
 =head1 DESCRIPTION
@@ -181,9 +181,9 @@ L<Data::FormValidator::Constraints::Business::DK::CVR>
 
 =head2 validate
 
-The function takes a single argument, a 10 digit CVR number. 
+The function takes a single argument, a 10 digit CVR number.
 
-The function returns 1 (true) in case of a valid CVR number argument and  0 
+The function returns 1 (true) in case of a valid CVR number argument and  0
 (false) in case of an invalid CVR number argument.
 
 If the argument is a valid argument the sum is calculated by B<_calculate_sum>
@@ -206,7 +206,7 @@ authorities, but it can be used to generate example CVRs for testing and so on.
 
 =head2 _calculate_sum
 
-This function takes an integer and calculates the sum bases on the the 
+This function takes an integer and calculates the sum bases on the the
 controlcifer array.
 
 =head1 EXPORTS
@@ -307,7 +307,7 @@ Jonas B. Nielsen, (jonasbn) - C<< <jonasbn@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Business-DK-CVR is (C) by Jonas B. Nielsen, (jonasbn) 2006-2014
+Business-DK-CVR and related is (C) by Jonas B., (jonasbn) 2006-2020
 
 =head1 LICENSE
 
