@@ -1,8 +1,6 @@
 Changes file for Business::DK::CVR
 
-The project Changelog is available at:
-
-http://logiclab.jira.com/browse/BDKCVR#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
+0.10 2020-05-31, maintenance release, update not required
 
 - Migrating build system from Module::Build to Dist::Zilla
 
