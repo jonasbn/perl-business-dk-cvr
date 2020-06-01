@@ -305,7 +305,7 @@ or by sending mail to
 
 =head1 AUTHOR
 
-Jonas B. Nielsen, (jonasbn) - C<< <jonasbn@cpan.org> >>
+Jonas B., (jonasbn) - C<< <jonasbn@cpan.org> >>
 
 =head1 ACKNOWLEDGEMENTS
 
