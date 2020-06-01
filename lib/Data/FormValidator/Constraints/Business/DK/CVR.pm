@@ -14,7 +14,7 @@ use base 'Exporter';
 use constant VALID   => 1;
 use constant INVALID => undef;
 
-$VERSION = '0.10';
+$VERSION = '0.11';
 
 sub valid_cvr {
     return sub {
@@ -65,7 +65,7 @@ Data::FormValidator::Constraints::Business::DK::CVR - constraint for Danish CVR
 
 =head1 VERSION
 
-The documentation describes version 0.10 of Data::FormValidator::Constraints::Business::DK::CVR
+The documentation describes version 0.11 of Data::FormValidator::Constraints::Business::DK::CVR
 
 =head1 SYNOPSIS
 

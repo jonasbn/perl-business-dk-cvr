@@ -8,7 +8,7 @@ use English qw(-no_match_vars);
 
 use Business::DK::CVR qw(validate);
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 private number => my %number;    # read-only accessor: number()
 
@@ -67,7 +67,7 @@ Class::Business::DK::CVR - Danish CVR number class
 
 =head1 VERSION
 
-The documentation describes version 0.10 of Class::Business::DK::CVR
+The documentation describes version 0.11 of Class::Business::DK::CVR
 
 =head1 SYNOPSIS
 

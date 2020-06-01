@@ -8,7 +8,7 @@ Business::DK::CVR - Danish CVR (VAT Registration) number generator/validator
 
 # VERSION
 
-This documentation describes version 0.10 of Business::DK::CVR
+This documentation describes version 0.11 of Business::DK::CVR
 
 # SYNOPSIS
 
@@ -164,6 +164,11 @@ or by sending mail to
 # AUTHOR
 
 Jonas B. Nielsen, (jonasbn) - `<jonasbn@cpan.org>`
+
+# ACKNOWLEDGEMENTS
+
+- Karen Etheridge (ETHER)
+- Andreas König (ANDK)
 
 # COPYRIGHT
 

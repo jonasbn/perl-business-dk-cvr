@@ -1,4 +1,12 @@
-Changes file for Business::DK::CVR
+Change log for Business::DK::CVR
+
+0.11 2020-06-01, maintenance release, update not required
+
+- Improvements to Dist::Zilla config, only ExtUtils::MakeMaker supported via Dist::Zilla now. Module::Build support having been removed
+
+- See the Article by Neil Bowers (NEILB) on the topic: https://neilb.org/2015/05/18/two-build-files-considered-harmful.html
+
+- Thanks to Karen Etheridge (ETHER) for information and link to the mentioned article
 
 0.10 2020-05-31, maintenance release, update not required
 
@@ -6,6 +14,7 @@ Changes file for Business::DK::CVR
 
 - Upgrading license from Artistic 1.0 to Artistic 2.0
 
+- Thanks to Andreas König (ANDK) for the push to get this release uploaded
 
 0.09 2014-08-23, maintenance release, update not required
 
