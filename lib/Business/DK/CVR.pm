@@ -104,6 +104,8 @@ __END__
 
 =pod
 
+=encoding utf8
+
 =begin markdown
 
 [![CPAN version](https://badge.fury.io/pl/Business-DK-CVR.svg)](http://badge.fury.io/pl/Business-DK-CVR)
