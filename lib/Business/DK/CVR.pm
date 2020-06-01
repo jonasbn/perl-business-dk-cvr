@@ -277,7 +277,11 @@ Coverage of the test suite is at 100%
 
 =head1 BUG REPORTING
 
-Please report issues via CPAN RT:
+Please report issue via GitHub
+
+    https://github.com/jonasbn/perl-business-dk-cvr/issues
+
+Alternativly report issues via CPAN RT:
 
   http://rt.cpan.org/NoAuth/Bugs.html?Dist=Business-DK-CVR
 
