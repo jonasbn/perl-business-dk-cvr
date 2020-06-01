@@ -315,6 +315,8 @@ Jonas B., (jonasbn) - C<< <jonasbn@cpan.org> >>
 
 =item * Andreas König (ANDK)
 
+=item * Neil Bowers (NEILB)
+
 =back
 
 =head1 COPYRIGHT
