@@ -61,7 +61,7 @@ This documentation describes version 0.12 of Business::DK::CVR
 
 # DESCRIPTION
 
-CVR is a company registration number used in conjuction with VAT handling in
+CVR is a company registration number used in conjunction with VAT handling in
 Denmark.
 
 If you want to use this module with [Data::FormValidator](https://metacpan.org/pod/Data::FormValidator) please check:
@@ -77,9 +77,9 @@ The function returns 1 (true) in case of a valid CVR number argument and  0
 (false) in case of an invalid CVR number argument.
 
 If the argument is a valid argument the sum is calculated by **\_calculate\_sum**
-based on the argument and the controlcifers array.
+based on the argument and the control digits array.
 
-The sum returned is checked using a modulus caluculation and based on its
+The sum returned is checked using a modulus calculation and based on its
 validity either 1 or 0 is returned.
 
 ## validateCVR
@@ -97,7 +97,7 @@ authorities, but it can be used to generate example CVRs for testing and so on.
 ## \_calculate\_sum
 
 This function takes an integer and calculates the sum bases on the the
-controlcifer array.
+control digits array.
 
 # EXPORTS
 
@@ -148,7 +148,7 @@ Please report issue via GitHub
 
     https://github.com/jonasbn/perl-business-dk-cvr/issues
 
-Alternativly report issues via CPAN RT:
+Alternatively report issues via CPAN RT:
 
     http://rt.cpan.org/NoAuth/Bugs.html?Dist=Business-DK-CVR
 
