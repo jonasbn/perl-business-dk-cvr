@@ -109,7 +109,7 @@ __END__
 =begin markdown
 
 [![CPAN version](https://badge.fury.io/pl/Business-DK-CVR.svg)](http://badge.fury.io/pl/Business-DK-CVR)
-[![Build Status](https://travis-ci.org/jonasbn/bdkcvr.svg?branch=master)](https://travis-ci.org/jonasbn/bdkcvr)
+[![Build Status](https://travis-ci.org/jonasbn/perl-business-dk-cvr.svg?branch=master)](https://travis-ci.org/jonasbn/perl-business-dk-cvr)
 [![Coverage Status](https://coveralls.io/repos/jonasbn/bdkcvr/badge.png)](https://coveralls.io/r/jonasbn/bdkcvr)
 
 =end markdown
