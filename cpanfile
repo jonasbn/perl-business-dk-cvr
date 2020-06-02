@@ -24,6 +24,7 @@ on 'test', sub {
     requires 'Test::Pod::Coverage', '1.08';
     requires 'Test::Tester', '1.302111';
     requires 'Test::Taint';
+    requires 'Test::Exception';
     requires 'Taint::Runtime';
 };
 
