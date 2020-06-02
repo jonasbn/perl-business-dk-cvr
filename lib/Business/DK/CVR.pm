@@ -10,7 +10,7 @@ use 5.008; #5.8.0
 
 use base qw(Exporter);
 
-$VERSION   = '0.11';
+$VERSION   = '0.12';
 @EXPORT_OK = qw(validate validateCVR generate _calculate_sum);
 
 use constant MODULUS_OPERAND => 11;
@@ -120,7 +120,7 @@ Business::DK::CVR - Danish CVR (VAT Registration) number generator/validator
 
 =head1 VERSION
 
-This documentation describes version 0.11 of Business::DK::CVR
+This documentation describes version 0.12 of Business::DK::CVR
 
 =head1 SYNOPSIS
 
@@ -320,6 +320,8 @@ Jonas B., (jonasbn) - C<< <jonasbn@cpan.org> >>
 =item * Andreas König (ANDK)
 
 =item * Neil Bowers (NEILB)
+
+=item * Mohammad S Anwar (MANWAR)
 
 =back
 

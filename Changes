@@ -1,5 +1,10 @@
 Change log for Business::DK::CVR
 
+0.12 2020-06-02, maintenance release, update not required
+
+- Added missing specification of test requirement to cpanfile
+  Thanks to Mohammad S Anwar (MANWAR) for the PR
+
 0.11 2020-06-01, maintenance release, update not required
 
 - Improvements to Dist::Zilla config, only ExtUtils::MakeMaker supported via Dist::Zilla now. Module::Build support having been removed
