@@ -1,11 +1,11 @@
 Change log for Business::DK::CVR
 
-0.12 2020-06-02, maintenance release, update not required
+0.12 2020-06-02 Maintenance release, update not required
 
 - Added missing specification of test requirement to cpanfile
   Thanks to Mohammad S Anwar (MANWAR) for the PR
 
-0.11 2020-06-01, maintenance release, update not required
+0.11 2020-06-01 Maintenance release, update not required
 
 - Improvements to Dist::Zilla config, only ExtUtils::MakeMaker supported via Dist::Zilla now. Module::Build support having been removed
 
@@ -13,7 +13,7 @@ Change log for Business::DK::CVR
 
 - Thanks to Karen Etheridge (ETHER) for information and link to the mentioned article
 
-0.10 2020-05-31, maintenance release, update not required
+0.10 2020-05-31 Maintenance release, update not required
 
 - Migrating build system from Module::Build to Dist::Zilla
 
@@ -21,13 +21,13 @@ Change log for Business::DK::CVR
 
 - Thanks to Andreas König (ANDK) for the push to get this release uploaded
 
-0.09 2014-08-23, maintenance release, update not required
+0.09 2014-08-23 Maintenance release, update not required
 
 - Added specification of required Perl version, settling for
   5.8 for now as reported by Perl::Critic
 
 
-0.08 2014-08-15, maintenance release, update not required
+0.08 2014-08-15 Maintenance release, update not required
 
 - Addressing Kwalitee, aligning version for version consistency
   in modules in distribution
@@ -38,7 +38,7 @@ Change log for Business::DK::CVR
   https://logiclab.jira.com/browse/BDKCVR-9
 
 
-0.07 2013-08-01, maintenance release, update not required
+0.07 2013-08-01 Maintenance release, update not required
 
 - Fixed up Changes file as part of my Questhub quest adhering to
   the standard described in: CPAN::Changes::Spec [BDKCVR-8]
@@ -53,7 +53,7 @@ Change log for Business::DK::CVR
   https://logiclab.jira.com/browse/BDKCVR-5
 
 
-0.06 2011-02, maintenance release, update not required
+0.06 2011-02 Maintenance release, update not required
 
 - Added use of Params::Validate in key places and phased out use
   of Business::DK::PO
@@ -64,7 +64,7 @@ Change log for Business::DK::CVR
   obsoleted
 
 
-0.05 2008-06-11, feature release, update not required
+0.05 2008-06-11 Feature release, update not required
 
 - Add object oriented variant implementation [BDKCVR-1],
   introducing Class::Business::DK::CVR
@@ -99,14 +99,14 @@ Change log for Business::DK::CVR
   experimental
 
 
-0.04 2007-03-13, maintenance release, update not required
+0.04 2007-03-13 Maintenance release, update not required
 
 - Fixed problem in t/critic.t, I had implemented a mix of my own
   and the recommended Perl::Critic test, so it gave unforseen
   test failures
 
 
-0.03 2007-03-12, maintenance release, update not required
+0.03 2007-03-12 Maintenance release, update not required
 
 - Added Perl::Critic test, t/critic.t and related t/perlcriticrc
 
@@ -121,7 +121,7 @@ Change log for Business::DK::CVR
   This seem to be the defacto way of doing things.
 
 
-0.02 2006-03-01, maintenance release, update not required
+0.02 2006-03-01 Maintenance release, update not required
 
 - Added some more links to SEE ALSO section, apparently there is
   already a module on CPAN capable of validating CVR numbers
