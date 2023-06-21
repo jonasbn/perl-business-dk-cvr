@@ -20,7 +20,7 @@ on 'test', sub {
     requires 'Test::Fatal';
     requires 'Test::Kwalitee', '1.28';
     requires 'Test::More';
-    requires 'Test::Pod', '1.41';
+    requires 'Test::Pod', '1.52';
     requires 'Test::Pod::Coverage', '1.08';
     requires 'Test::Tester', '1.302195';
     requires 'Test::Taint';
@@ -39,6 +39,6 @@ on 'develop', sub {
     requires 'Test::CPAN::Meta::JSON', '0.16';
     requires 'Test::Kwalitee', '1.28';
     requires 'Test::Perl::Critic';
-    requires 'Test::Pod', '1.41';
+    requires 'Test::Pod', '1.52';
     requires 'Test::Pod::Coverage', '1.08';
 };
