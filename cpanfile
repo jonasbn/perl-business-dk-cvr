@@ -22,7 +22,7 @@ on 'test', sub {
     requires 'Test::More';
     requires 'Test::Pod', '1.41';
     requires 'Test::Pod::Coverage', '1.08';
-    requires 'Test::Tester', '1.302111';
+    requires 'Test::Tester', '1.302195';
     requires 'Test::Taint';
     requires 'Test::Exception';
     requires 'Taint::Runtime';
